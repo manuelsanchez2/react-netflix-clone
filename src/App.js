@@ -7,7 +7,6 @@ import Banner from "./components/Banner";
 function App() {
   return (
     <div className="App">
-      <h1>Netflix Clone</h1>
       <Banner />
       <Row
         title="NETFLIX ORIGINALS"

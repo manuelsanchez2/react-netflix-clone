@@ -29,14 +29,17 @@ const Banner = () => {
       }}
     >
       <div className="banner__contents">
-        <h1>{movie?.title || movie?.name || movie?.original_name}</h1>
+        <h1 className="banner__title">
+          {movie?.title || movie?.name || movie?.original_name}
+        </h1>
 
         <div className="banner__buttons">
           <button className="banner__button">Play</button>
-          <button className="banner__button">Play</button>
+          <button className="banner__button">My list</button>
         </div>
-        <h2 className="banner__descriptions">{movie?.overview}</h2>
+        <h2 className="banner__description">{movie?.overview}</h2>
       </div>
+      <div className="banner--fadeBottom" />
     </header>
   );
 };
