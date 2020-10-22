@@ -1,1 +1,5 @@
 GET https://api.themoviedb.org/3/movie/550?api_key=533ff58c4917588c09935c58aaf815cb
+
+###
+
+GET https://image.tmdb.org/t/p/original/
