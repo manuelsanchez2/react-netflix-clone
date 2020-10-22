@@ -5,7 +5,7 @@ import "./Row.css";
 const Row = ({ title, fetchUrl, isLargeRow }) => {
   const [movies, setMovies] = useState([]);
 
-  const base_url = "https://image.tmdb.org/t/p/w500/";
+  const base_url = "https://image.tmdb.org/t/p/original/";
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
