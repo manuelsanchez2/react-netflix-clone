@@ -14,11 +14,14 @@ const Banner = () => {
           Math.floor(Math.random() * request.data.results.length - 1)
         ];
       setMovie(randomFilm);
-      return;
+      return request;
     }
     fetchData();
   }, []);
 
+  function truncate(str, n) {
+    return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+  }
   return (
     <header
       className="banner"
@@ -37,7 +40,9 @@ const Banner = () => {
           <button className="banner__button">Play</button>
           <button className="banner__button">My list</button>
         </div>
-        <h2 className="banner__description">{movie?.overview}</h2>
+        <h2 className="banner__description">
+          {truncate(movie?.overview, 150)}
+        </h2>
       </div>
       <div className="banner--fadeBottom" />
     </header>
